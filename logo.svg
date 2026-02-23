@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70">
+  <defs>
+    <linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a5c2e"/>
+      <stop offset="100%" stop-color="#2d7a47"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="70" rx="8" fill="url(#gb)"/>
+  <!-- Truck body -->
+  <g transform="translate(10,12)">
+    <rect x="26" y="8" width="36" height="26" rx="3" fill="none" stroke="white" stroke-width="2.2"/>
+    <rect x="2" y="16" width="26" height="18" rx="2" fill="none" stroke="white" stroke-width="2.2"/>
+    <rect x="5" y="19" width="15" height="10" rx="1.5" fill="rgba(255,255,255,0.25)" stroke="white" stroke-width="1.2"/>
+    <circle cx="12" cy="40" r="6" fill="none" stroke="white" stroke-width="2.2"/>
+    <circle cx="12" cy="40" r="2.5" fill="white"/>
+    <circle cx="52" cy="40" r="6" fill="none" stroke="white" stroke-width="2.2"/>
+    <circle cx="52" cy="40" r="2.5" fill="white"/>
+    <!-- Speed lines -->
+    <line x1="-2" y1="22" x2="-12" y2="22" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-2" y1="28" x2="-15" y2="28" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-2" y1="34" x2="-10" y2="34" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- Text block -->
+  <text x="90" y="24" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="15" fill="white" letter-spacing="0.5">ПЕРЕЕЗД</text>
+  <text x="90" y="42" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="15" fill="white" letter-spacing="0.5">ЭКСПРЕСС</text>
+  <text x="90" y="58" font-family="Arial,sans-serif" font-size="8.5" fill="rgba(200,240,215,0.9)" letter-spacing="0.3">ТРАНСПОРТНАЯ КОМПАНИЯ</text>
+</svg>
