@@ -223,7 +223,20 @@ section{padding:64px 0}
 .cline-val a{color:var(--green);text-decoration:none;font-size:18px;font-weight:800}
 .map-frame{flex:1.4;min-width:280px;height:360px;border-radius:10px;overflow:hidden;border:1px solid #ddd}
 
-/* ── STICKY ── */
+/* ── MOB NAV BAR ── */
+.mob-nav{display:none;background:#fff;border-bottom:1px solid #e0e8e2;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.mob-nav::-webkit-scrollbar{display:none}
+.mob-nav a{display:inline-block;padding:10px 16px;font-family:var(--fn);font-size:13px;font-weight:700;color:var(--gray);text-decoration:none;border-bottom:2px solid transparent;transition:.15s}
+.mob-nav a:hover,.mob-nav a:active{color:var(--green);border-bottom-color:var(--green)}
+
+/* ── MOB BOTTOM BAR ── */
+.mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:998;background:#fff;border-top:1px solid #dde7e0;padding:10px 12px;gap:10px}
+.mob-bar-call{flex:1;background:var(--green);color:#fff;text-align:center;padding:13px 0;border-radius:6px;font-family:var(--fn);font-weight:800;font-size:15px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:7px}
+.mob-bar-form{flex:1;background:var(--orange);color:#fff;text-align:center;padding:13px 0;border-radius:6px;font-family:var(--fn);font-weight:800;font-size:15px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:7px}
+.mob-bar-call:hover{background:var(--green2)}
+.mob-bar-form:hover{background:var(--orange2)}
+
+/* ── STICKY (desktop) ── */
 .sticky{position:fixed;bottom:24px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:999}
 .sticky-btn{display:flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:50%;font-size:22px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25);transition:.2s}
 .sticky-btn:hover{transform:scale(1.12)}
@@ -243,6 +256,12 @@ footer a:hover{color:#fff}
   .hdr-nav{display:none}
   /* Хедер — убираем телефон, оставляем лого + кнопку */
   .hdr-phone{display:none}
+  /* Мобильный nav-бар */
+  .mob-nav{display:block}
+  /* Нижняя панель кнопок */
+  .mob-bar{display:flex}
+  .sticky{display:none}
+  body{padding-bottom:72px}
   /* Герой: фото сначала, потом текст */
   .hero{min-height:unset}
   .hero .w{flex-direction:column;padding:0}
@@ -335,6 +354,16 @@ footer a:hover{color:#fff}
     </div>
   </div>
 </header>
+
+<!-- MOB NAV -->
+<nav class="mob-nav">
+  <a href="#services">Услуги</a>
+  <a href="#prices">Цены</a>
+  <a href="#how">Как работаем</a>
+  <a href="#gallery">Фото</a>
+  <a href="#reviews">Отзывы</a>
+  <a href="#contacts">Контакты</a>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -453,7 +482,7 @@ footer a:hover{color:#fff}
 </section>
 
 <!-- GALLERY -->
-<section style="padding:48px 0;background:var(--light)">
+<section id="gallery" style="padding:48px 0;background:var(--light)">
   <div class="w">
     <h2 class="sec-title center">Фотографии наших работ</h2>
     <p class="sec-sub center">Реальные переезды наших клиентов</p>
@@ -721,10 +750,16 @@ footer a:hover{color:#fff}
   </div>
 </footer>
 
-<!-- STICKY BUTTONS -->
+<!-- STICKY BUTTONS (desktop) -->
 <div class="sticky">
   <a class="sticky-btn sticky-call" href="tel:79000000000" title="Позвонить">📞</a>
   <a class="sticky-btn sticky-wa" href="https://wa.me/79000000000" target="_blank" title="WhatsApp">💬</a>
+</div>
+
+<!-- MOB BOTTOM BAR -->
+<div class="mob-bar">
+  <a class="mob-bar-call" href="tel:79000000000">📞 Позвонить</a>
+  <a class="mob-bar-form" href="#callback">📋 Заявка</a>
 </div>
 
 </body>
