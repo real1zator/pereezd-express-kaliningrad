@@ -241,18 +241,61 @@ footer a:hover{color:#fff}
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
   .hdr-nav{display:none}
-  .hero .w{flex-direction:column}
-  .hero-left{flex:unset;max-width:100%;padding:36px 0 16px}
-  .hero-right{flex:unset;max-width:100%;width:100%;padding:0 0 20px}
-  .hero-right img{max-height:260px}
+  /* Хедер — убираем телефон, оставляем лого + кнопку */
+  .hdr-phone{display:none}
+  /* Герой: фото сначала, потом текст */
+  .hero{min-height:unset}
+  .hero .w{flex-direction:column;padding:0}
+  .hero-right{
+    order:-1;
+    flex:unset;max-width:100%;width:100%;
+    padding:0;
+    height:240px;
+    overflow:hidden;
+  }
+  .hero-right img{
+    width:100%;height:240px;
+    object-fit:cover;object-position:center 30%;
+    filter:none;
+    border-radius:0;
+    max-height:none;
+  }
+  .hero-left{
+    flex:unset;max-width:100%;
+    padding:22px 20px 20px;
+  }
+  .hero h1{font-size:clamp(20px,6.5vw,30px)}
+  .hero-sub{font-size:13px;margin-bottom:14px}
+  .hero-price-inline{
+    flex-direction:row;align-items:center;gap:10px;
+    padding:10px 14px;margin-bottom:18px;
+  }
+  .hero-price-inline .price-big{font-size:22px}
+  .hero-price-inline .price-desc{font-size:11px}
   .cta-flex{flex-direction:column}
   .cta-form{flex:1;min-width:unset;width:100%}
   .contacts-flex{flex-direction:column}
   .map-frame{height:260px}
 }
 @media(max-width:600px){
-  .strip .w{gap:8px}
-  .strip-item{min-width:90px}
+  .strip .w{gap:6px}
+  .strip-item{min-width:80px}
+  .strip-val{font-size:17px}
+  .strip-lbl{font-size:10px}
+  /* Кнопки героя — полная ширина */
+  .hero-cta{flex-direction:column;gap:10px}
+  .btn-hero-primary,.btn-hero-outline{
+    width:100%;text-align:center;justify-content:center;
+    padding:14px 20px;
+  }
+  /* Хедер — минимум на маленьких */
+  .hdr-logo img{width:150px;height:auto}
+  .btn-call{padding:9px 16px;font-size:13px}
+  /* Доверие */
+  .hero-trust{gap:10px}
+  .trust-item{font-size:11px}
+  /* Секции */
+  section{padding:44px 0}
 }
 </style>
 </head>
